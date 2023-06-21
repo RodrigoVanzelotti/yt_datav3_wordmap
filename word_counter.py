@@ -9,7 +9,3 @@ def count_word_occurrences(text):
     word_counts = Counter(words)
 
     return word_counts
-
-def save_string_to_txt(string, filename='youtube_string.txt'):
-    with open(filename, 'w') as file:
-        file.write(string)
