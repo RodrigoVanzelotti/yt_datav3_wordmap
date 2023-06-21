@@ -88,10 +88,17 @@ class ytAnalytics:
         Returns:
             Dict Data from endpoint
         '''
-        response = self.suppliant_analytics.reports().query(
-            **kwargs
-        ).execute()
+        response = self.suppliant_analytics.reports().query(**kwargs).execute()
+        return response
+    
+    def execute_api_query_v3(self, **kwargs) -> dict:
+        '''
+        Realiza query crua do datav3, todos args devem ser fornecidos
 
+        Returns:
+            Dict Data from endpoint
+        '''
+        response = self.suppliant_datav3.search().list(**kwargs).execute()
         return response
 
     def get_video_data(self, video_ids:str | list, compact_return:bool = False) -> dict: 
