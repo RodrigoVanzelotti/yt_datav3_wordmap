@@ -1,5 +1,5 @@
 from request_class import ytAnalytics
-from sample_handler import save_sample, read_sample
+# from sample_handler import save_sample, read_sample
 from word_counter import count_word_occurrences 
 
 search_term = 'minecraft'
